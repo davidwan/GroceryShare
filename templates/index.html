@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}}{% endblock %}
+
+{% block styles %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}} 
+{% endblock styles %}
+
+{% block nav %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}}
+{% endblock nav %}
+
+{% block content %}
+
+  <div class="hero-unit">
+  	<p>Blurb about our app</p>
+  </div>
+
+  	<form action="/search/" method="post"> {% csrf_token %}
+        <input type="text" name="query">
+        <input type="submit" value="Search">
+   	</form>
+
+{% endblock content %}
+
+{% block footer %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}}
+{% endblock footer %}
+
+{% block scripts %}
+<!-- HP: Put your scripts here -->
+{% endblock scripts %}
+

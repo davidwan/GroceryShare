@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Groceryshare</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+
+    <link href="media/css/social-buttons.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" />
+    <link href="media/css/style.css" rel="stylesheet" />
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="media/js/jquery-1.7.2.min.js"></script>
+    <script src="media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    
+</head>
+
+<body>
+      <div id="logo">
+       <img src="../media/img/banner.png"/>
+     </div>
+     <!--NUMBER INGREDIENTS AND TOBUY LIST-->
+      <div class="wrapper">
+    <div id = "profile">
+     <p> {{ name }} </p>
+     <img src='{{picture}}' />
+  </div>
+
+          <div id = "ingredients">
+                 <form action="/search/" method="post" class="form-horizontal"> {% csrf_token %}
+                  <br />
+                  <br />
+                  <input type="text" name="query" placeholder="Enter your recipes" class="input-large" />
+                  <input type="submit" value="Search" class="btn btn-large" />
+                </form>
+           </div>
+            </div>
+       </body>
+</html>
+

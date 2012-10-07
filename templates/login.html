@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}}{% endblock %}
+
+{% block styles %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}}
+{% endblock styles %}
+
+{% block nav %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}}
+{% endblock nav %}
+
+{% block content %}
+
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+    	console.log('button');
+      FB.init({
+        appId      : '438894882828939', // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+
+      // Additional initialization code here
+      var loggedIn = false;
+      
+      var login = function(resp, msg) {
+        if (loggedIn) return;
+        loggedIn = true;
+        console.log('logged in');
+        var id = resp.authResponse.userID;
+        console.log(id);
+        document.cookie = 'recipefbID'+"="+id+"; path=/";
+        document.location = '/home/';
+      };
+      FB.getLoginStatus(function(resp) { console.log(resp); if (resp.status === "connected") login(resp, 'getLoginStatus'); });
+      FB.Event.subscribe('auth.login', function(resp) { login(resp, 'auth.login'); });
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+       console.log('entering loading');
+       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       ref.parentNode.insertBefore(js, ref);
+     }(document));
+   </script>
+ <div class = "container">
+   <div id="logo">
+     <img src="../media/img/logo.png"/>
+     <div id = "motto">
+       <p>Collaborate to save.</p>
+     </div>
+  </div>
+  <div id="login-button">
+    <div class="fb-login-button" scope="user_location"></div>
+  </div>
+  <p><em>Use Grocery Share to save time and money while making an investment in protecting the planet.</em></p>
+</div>
+{% endblock content %}
+
+{% block footer %}
+<!-- HP: Usually leave this alone. You can override the default by removing block.super or augment it by adding things above or below.  -->
+{{block.super}}
+{% endblock footer %}
+
+{% block scripts %}
+<!-- HP: Put your scripts here -->
+{% endblock scripts %}

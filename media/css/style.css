@@ -1,0 +1,108 @@
+﻿body {
+    background-color: white;
+    padding-top: 120px;
+}
+
+h1 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    color:black;
+    text-align: center;
+}
+
+p {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 1.5em;
+}
+
+body div.container {
+  text-align:center;
+  margin-top: -40px;
+}
+
+body div#login-button {
+  margin-left:30px;
+  text-align: center;
+}
+
+body div#logo {
+  text-align: center;
+}
+
+body div #motto {
+  margin-top: -20px;
+  margin-left:20px;
+}
+
+body div #motto p {
+  font-size: 20px;
+}
+
+body div.wrapper {
+  text-align: center;
+  min-width: 1000px;
+}
+
+body div#profile {
+  text-align:center;
+}
+
+body div.wrapper div#profile p {
+  text-align:center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body div#ingredients {
+  text-align:center;
+}
+body div #ingredients form input{
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   font-size: 20px;
+
+}
+
+body div #ingredients form input.submit {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   font-size: 16px;
+}
+
+body div.content {
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+body div.content p a {
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+}
+
+body div.content p a:hover {
+  color: teal;
+}
+
+body div#banner {
+  text-align:center;
+  margin-top:-70px;
+}
+
+body div#match {
+  text-align: center;
+}
+
+body div#match a {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Helvetica, Arial, "Lucida Grande", sans-serif; 
+  text-decoration:none;
+  color: teal;
+  font-size: 30px;
+}
+
+body div#match a:hover {
+  color:steelblue;
+}

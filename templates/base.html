@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{hackpack.project_name}} | {{hackpack.thispage}}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{project_description}}">
+    <meta name="author" content="{% for founder in founders %}{{ founder.name }},{% endfor %}">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,300bold' rel='stylesheet' type='text/css'>
+
+    {% block styles %}
+      <link href="/media/css/style.css" rel="stylesheet">
+    {% endblock styles %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!-- HP: edit this if you feel like it -->
+    <link rel="shortcut icon" href="/media/img/ico/favicon.ico">
+  </head>
+
+  <body>
+    <!-- HP: By executive fiat, I hereby declare it prohibited to use the navbar-inverse class! -->
+
+      {% block content %}     
+      {% endblock content %}
+
+    </div> <!-- /container -->
+
+    <script src="/media/js/jquery.min.js"></script>
+    <script src="/media/js/bootstrap.js"></script>
+    <script>
+      $(function(){
+        var popover_options = {
+          'trigger':'hover', 
+          'html':'true',
+          'placement':'top',
+          'offset':'10px',
+        };
+        $('footer center p a').popover(popover_options);  
+      });
+    </script>
+    {% block scripts %}
+    {% endblock scripts %}
+    
+    <!-- HP: You should probably get a Google Analytics account for this immediately! -->
+    <!-- Change UA-XXXXX-X to be your site's ID -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+      _gaq.push(['_setDomainName', 'XXXXXXXXXX']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>
