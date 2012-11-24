@@ -141,7 +141,7 @@ def home(request):
   else:
     return redirect('/')
   return render_to_response('home.html', hackpackify(request, context))
-'''
+
 def match(request):
     all_users = User.objects.filter(current_location = 'University of Pennsylvania')
     graph = facebook.GraphAPI(user["access_token"])
@@ -186,7 +186,7 @@ def search(request):
     dictionary = {}
     message = 'You submitted an empty form. Please go back to the search page'
   return render_to_response('results.html', { "vals" : dictionary.values})
-'''
+
 def search(request):
   context = {
     'thispage': 'Search',
