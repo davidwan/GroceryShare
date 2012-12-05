@@ -37,12 +37,14 @@ def hackpackify(request, context):
   #HP Founder information is in popups linked from the footers, the about page, and <meta name="author">
   founders = [
     {'name':'Vivian Huang',
-       'email':'rattray@wharton.upenn.edu',
-       'url':'http://alexrattray.com/',
-       'blurb':'I\'m Alex. I like webdev and most things Seattle.',
+       'email':'vivhuang@seas.upenn.edu',
+       'url':'www.vivhuang.com',
+       'blurb':'Hi, I\'m Vivian.',
        'picture':'http://profile.ak.fbcdn.net/hprofile-ak-ash2/273392_515004220_1419119046_n.jpg'},
     {'name': 'Clara Wu',
       'email': 'scwu@seas.upenn.edu',
+      'url': 'www.clarawu.com',
+      'blurb':'Hi, I\'m Clara.',
     },
     {'name':'Abhishek Gadiraju',
        'email':'agadi@seas.upenn.edu',
@@ -52,7 +54,7 @@ def hackpackify(request, context):
     {'name':'Defu Wan',
        'email':'gterrono@seas.upenn.edu',
        'url':'http://twitter.com/',
-       'blurb':'I\'m Greg. I like webdev and most things Boston. And Dogs.',
+       'blurb':'I\'m Defu. I like webdev and most things Boston. And Dogs.',
        'picture':'http://chucknorri.com/wp-content/uploads/2011/03/Chuck-Norris-14.jpg'},
     ]
   hackpack_context = {
